@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 const Hero = () => {
   return (
-    <Wrapper>
+    <Container>
       <p>HERO</p>
-    </Wrapper>
+    </Container>
   );
 };
 
-const Wrapper = styled.div`
+const Container = styled.div`
   height: 100vh;
   display: flex;
   border: 5px violet solid;

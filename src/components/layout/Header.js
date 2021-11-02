@@ -11,19 +11,25 @@ const Header = ({ toggle }) => {
         <Icon onClick={toggle}>
           <FiMenu />
         </Icon>
-        <ul>
-          <li>
-            <ScrollLink to="projects" smooth={true} duration={500}>
-              PROJECTS
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to="about">ABOUT</ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to="contact">CONTACT</ScrollLink>
-          </li>
-        </ul>
+        <NavMenu>
+          {/* <NavItem> */}
+          <ScrollLink
+            to="projects"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+          >
+            PROJECTS
+          </ScrollLink>
+          {/* </NavItem> */}
+          {/* <NavItem> */}
+          <ScrollLink to="about">ABOUT</ScrollLink>
+          {/* </NavItem> */}
+          {/* <NavItem> */}
+          <ScrollLink to="contact">CONTACT</ScrollLink>
+          {/* </NavItem> */}
+        </NavMenu>
       </Nav>
     </Wrapper>
   );
@@ -37,6 +43,7 @@ const Wrapper = styled.header`
   background: #272829;
   position: fixed;
   display: flex;
+  z-index: 20;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -47,14 +54,15 @@ const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  /* border: 1px solid red; */
+  z-index: 1;
+  border: 1px solid yellow;
 
-  ul {
+  /* ul {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     color: #ffffff;
 
     @media screen and (max-width: 768px) {
@@ -64,7 +72,37 @@ const Nav = styled.nav`
 
   li {
     height: auto;
-    /* border: 1px solid green; */
+    border: 1px solid green;
+  } */
+`;
+
+const NavMenu = styled.ul`
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid yellow; */
+  color: #ffffff;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+// const NavItem = styled.li`
+//   height: auto;
+// `;
+
+const ScrollLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid red;
+  cursor: pointer;
+
+  &:active {
+    border-bottom: 3px solid orange;
   }
 `;
 
@@ -80,18 +118,6 @@ const Icon = styled.div`
     cursor: pointer;
     font-size: 1.8rem;
     color: #fff;
-  }
-`;
-
-const ScrollLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:active {
-    border-bottom: 3px solid orange;
   }
 `;
 
