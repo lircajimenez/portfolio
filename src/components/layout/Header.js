@@ -24,7 +24,7 @@ const Header = ({ toggle }) => {
           </ScrollLink>
           {/* </NavItem> */}
           {/* <NavItem> */}
-          <ScrollLink to="about">ABOUT</ScrollLink>
+          <ScrollLink to="skills">SKILLS</ScrollLink>
           {/* </NavItem> */}
           {/* <NavItem> */}
           <ScrollLink to="contact">CONTACT</ScrollLink>

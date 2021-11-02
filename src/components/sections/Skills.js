@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const About = () => {
+const Skills = () => {
   return (
-    <Wrapper id={"about"}>
-      <p>ABOUT ME</p>
+    <Wrapper id={"skills"}>
+      <p>SKILLS</p>
     </Wrapper>
   );
 };
@@ -15,4 +15,4 @@ const Wrapper = styled.div`
   border: 5px yellow solid;
 `;
 
-export default About;
+export default Skills;

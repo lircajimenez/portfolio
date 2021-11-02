@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
-import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
 import GlobalStyles from "./GlobalStyles";
@@ -22,7 +22,7 @@ const App = () => {
       <Header toggle={toggle} />
       <Hero />
       <Projects />
-      <About />
+      <Skills />
     </Router>
   );
 };
