@@ -1,12 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 // import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
-import styled from "styled-components";
+import { FiMenu } from "react-icons/fi";
 
-const Header = () => {
+const Header = ({ toggle }) => {
   return (
     <Wrapper>
       <Nav>
+        <Icon onClick={toggle}>
+          <FiMenu />
+        </Icon>
         <ul>
           <li>
             <ScrollLink to="projects" smooth={true} duration={500}>
@@ -27,36 +31,68 @@ const Header = () => {
 
 const Wrapper = styled.header`
   width: 100%;
-  height: 6vh;
+  height: 7vh;
+  /* height: 80px; */
   padding: 10px 20px;
   background: #272829;
   position: fixed;
   display: flex;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  border: 2px solid red;
+  /* border: 1px solid red; */
 
   ul {
     width: 50%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid yellow;
+    align-items: center;
+    /* border: 1px solid yellow; */
     color: #ffffff;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   li {
-    border: 1px solid green;
+    height: auto;
+    /* border: 1px solid green; */
+  }
+`;
+
+const Icon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 40%);
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #fff;
   }
 `;
 
 const ScrollLink = styled(Link)`
+  display: flex;
+  align-items: center;
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+
+  &:active {
+    border-bottom: 3px solid orange;
+  }
 `;
 
 export default Header;
