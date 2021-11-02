@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Projects = () => {
   return (
-    <Wrapper>
+    <Wrapper id={"contact"}>
       <p>PROJECTS</p>
     </Wrapper>
   );

@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const Header = () => {
@@ -8,13 +9,15 @@ const Header = () => {
       <Nav>
         <ul>
           <li>
-            <NavLink to="#projects">PROJECTS</NavLink>
+            <ScrollLink to="projects" smooth={true} duration={500}>
+              PROJECTS
+            </ScrollLink>
           </li>
           <li>
-            <NavLink to="#about">ABOUT</NavLink>
+            <ScrollLink to="about">ABOUT</ScrollLink>
           </li>
           <li>
-            <NavLink to="#contact">CONTACT</NavLink>
+            <ScrollLink to="contact">CONTACT</ScrollLink>
           </li>
         </ul>
       </Nav>
@@ -25,6 +28,7 @@ const Header = () => {
 const Wrapper = styled.header`
   width: 100%;
   height: 6vh;
+  padding: 10px 20px;
   background: #272829;
   position: fixed;
   display: flex;
@@ -32,12 +36,27 @@ const Wrapper = styled.header`
 
 const Nav = styled.nav`
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: flex-end;
+  width: 100%;
+  border: 2px solid red;
 
   ul {
+    width: 50%;
     display: flex;
     justify-content: space-between;
+    border: 1px solid yellow;
+    color: #ffffff;
   }
+
+  li {
+    border: 1px solid green;
+  }
+`;
+
+const ScrollLink = styled(Link)`
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 export default Header;
