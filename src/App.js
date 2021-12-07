@@ -18,7 +18,7 @@ const App = () => {
   return (
     <Router>
       <GlobalStyles />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
       <Header toggle={toggle} />
       <Hero />
       <Projects />

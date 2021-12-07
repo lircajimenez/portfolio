@@ -12,12 +12,13 @@ export default createGlobalStyle`
   input, button, select, option,
   h1, h2, h3, h4, h5, h6, p,
   span, strong, text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   html, body {
     max-width: 100vw;
+    color: white;
   }
 
   html, body, div, span, applet, object, iframe,

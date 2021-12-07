@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 const Skills = () => {
   return (
-    <Wrapper id={"skills"}>
+    <Container id={"skills"}>
       <p>SKILLS</p>
-    </Wrapper>
+    </Container>
   );
 };
 
-const Wrapper = styled.div`
+const Container = styled.div`
   height: 100vh;
   display: flex;
   border: 5px yellow solid;
