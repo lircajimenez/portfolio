@@ -36,10 +36,10 @@ const Header = ({ toggle }) => {
 
 const Wrapper = styled.header`
   width: 100%;
-  height: 7vh;
+  height: 6vh;
   /* height: 80px; */
   padding: 10px 20px;
-  background: transparent;
+  background: #111111;
   position: fixed;
   display: flex;
   z-index: 20;
