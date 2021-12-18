@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Typewriter from "typewriter-effect";
 import avatar from "../../assets/pics/634A1382_crop.jpg";
 
 const Hero = () => {
@@ -8,7 +9,23 @@ const Hero = () => {
       <Container>
         <img src={avatar} alt="Lirca Jiménez" />
         <h1>Lirca Jiménez</h1>
-        <p>Full Stack web developer</p>
+        <Effect>
+          <Typewriter
+            options={{
+              strings: [
+                "Full Stack Web Developer",
+                "Photographer",
+                "Risk Taker",
+                "Sunset Lover",
+              ],
+              autoStart: true,
+              loop: true,
+              pauseFor: 2000,
+              delay: "natural",
+              deleteSpeed: "natural",
+            }}
+          />
+        </Effect>
       </Container>
     </Wrapper>
   );
@@ -39,6 +56,11 @@ const Container = styled.div`
     color: #cf0593;
     text-shadow: -3px 4px #111111, -5px 5.5px #f0e227;
   }
+`;
+const Effect = styled.div`
+  font-size: 1.45rem;
+  letter-spacing: 0.15rem;
+  margin-top: 15px;
 `;
 
 export default Hero;
