@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../../GlobalStyles";
 import Typewriter from "typewriter-effect";
 import avatar from "../../assets/pics/634A1382_crop.jpg";
 
@@ -53,8 +54,8 @@ const Container = styled.div`
     font-size: 5rem;
     font-weight: 650;
     letter-spacing: 0.25rem;
-    color: #cf0593;
-    text-shadow: -3px 4px #111111, -5px 5.5px #f0e227;
+    color: ${COLORS.pink};
+    text-shadow: -3px 4px #111111, -5px 5.5px ${COLORS.yellow};
   }
 `;
 const Effect = styled.div`
