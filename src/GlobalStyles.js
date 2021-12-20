@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const COLORS = {
   pink: "#cf0593",
   yellow: "#f0e227",
-  green: "13A79E",
+  green: "#13a79e",
 };
 
 export default createGlobalStyle`
